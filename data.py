@@ -2,7 +2,7 @@
 import streamlit as st
 def app(cars_df):
   st.header("View Data")
-  with st.expander("View DataSet"):
+  with st.beta_expander("View DataSet"):
     st.table(cars_df)
 
   st.subheader("Columns Description:")
@@ -10,7 +10,7 @@ def app(cars_df):
     st.table(cars_df.describe())  
 
 
-  beta_col1, beta_col2, beta_col3 = st.columns(3)
+  beta_col1, beta_col2, beta_col3 = st.beta_columns(3)
   with beta_col1:
     if st.checkbox("Show all column names"):
       st.table(list(cars_df.columns))
