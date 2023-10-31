@@ -2,7 +2,7 @@
 import streamlit as st
 def app(cars_df):
   st.header("View Data")
-  st.table(cars_df)
+  st.dataframe(cars_df)
   # st.header("View Data")
   # with st.beta_expander("View DataSet"):
   #   st.table(cars_df)
